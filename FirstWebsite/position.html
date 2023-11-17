@@ -9,17 +9,39 @@
         width: 80px;
         height: 80px;
         background-color: red;
-        position: fixed;
+        /* position: fixed;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); */
         /* top: 30px;
         right: 30px; */
+        /* position: sticky;
+        top: 0;
+        bottom: 0; */
+      }
+
+      .parent {
+        width: 700px;
+        height: 500px;
+        border: 2px dotted #000;
+        position: relative;
+      }
+      .position {
+        position: absolute;
+        /* top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); */
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
       }
     </style>
   </head>
   <body>
-    <p>
+    <div class="parent">
+      <div class="position"></div>
+    </div>
+    <!-- <p>
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo quo dolorum
       possimus distinctio, consectetur rerum. Soluta tenetur commodi dolores
       ullam. Amet quos tempora ex facilis nisi earum assumenda temporibus
@@ -549,6 +571,6 @@
       fuga soluta, labore molestiae accusantium beatae tenetur nam ea ad cum
       nihil, veniam dolorem enim! Qui totam possimus velit aut nesciunt natus
       rem explicabo sapiente, odit numquam fuga quia suscipit optio eveniet.
-    </p>
+    </p> -->
   </body>
 </html>
