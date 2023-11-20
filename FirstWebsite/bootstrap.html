@@ -3,53 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>First Page</title>
-    <style>
-      * {
-        padding: 0;
-        margin: 0;
-      }
-      .container {
-        width: 80%;
-        margin: auto;
-      }
-      #gallerySection .card {
-        margin: 10px;
-        border: 1px solid #000;
-        padding: 10px;
-        border-radius: 8px;
-        box-shadow: inset 0px 4px 16px #ccc;
-      }
-      #gallerySection .card img {
-        max-width: 100%;
-      }
-      .row {
-        display: flex;
-        flex-wrap: wrap;
-      }
-      .col3 {
-        width: 33.33%;
-      }
-      /* tablet device */
-      @media (max-width: 799px) {
-        .col3 {
-          width: 50%;
-        }
-      }
-      /* mobile device */
-      @media (max-width: 576px) {
-        .col3 {
-          width: 100%;
-        }
-      }
-    </style>
+    <title>Bootstrap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
     <section id="gallerySection">
       <div class="container">
-        <div class="row">
-          <div class="col3">
-            <div class="card">
+        <div class="row justify-content-center">
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="gal_card">
               <img src="images/sec.webp" alt="" />
               <h2>Lorem, ipsum dolor.</h2>
               <p>
@@ -61,8 +27,8 @@
               </p>
             </div>
           </div>
-          <div class="col3">
-            <div class="card">
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="gal_card">
               <img src="images/sec.webp" alt="" />
               <h2>Lorem, ipsum dolor.</h2>
               <p>
@@ -74,8 +40,8 @@
               </p>
             </div>
           </div>
-          <div class="col3">
-            <div class="card">
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="gal_card">
               <img src="images/sec.webp" alt="" />
               <h2>Lorem, ipsum dolor.</h2>
               <p>
@@ -87,8 +53,8 @@
               </p>
             </div>
           </div>
-          <div class="col3">
-            <div class="card">
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="gal_card">
               <img src="images/sec.webp" alt="" />
               <h2>Lorem, ipsum dolor.</h2>
               <p>
@@ -100,8 +66,8 @@
               </p>
             </div>
           </div>
-          <div class="col3">
-            <div class="card">
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="gal_card">
               <img src="images/sec.webp" alt="" />
               <h2>Lorem, ipsum dolor.</h2>
               <p>
@@ -113,8 +79,8 @@
               </p>
             </div>
           </div>
-          <div class="col3">
-            <div class="card">
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="gal_card">
               <img src="images/sec.webp" alt="" />
               <h2>Lorem, ipsum dolor.</h2>
               <p>
