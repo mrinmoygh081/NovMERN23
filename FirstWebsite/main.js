@@ -55,6 +55,8 @@ let age = 70;
 //   ? console.log("Adult")
 //   : age >= 60
 //   ? console.log("OLD")
+//   : age >= 100
+//   ? console.log("Legend")
 //   : console.log("NotAdult");
 
 // Hoisting
@@ -67,6 +69,11 @@ function printSomething(value) {
 const printSomething2 = (value) => {
   console.log(`printSomething2: ${value}`);
 };
+// anonymous function
+((value) => {
+  // console.log(`printSomething2: ${value}`);
+})();
+
 // printSomething2("Mrinmoy");
 
 ////       0  1  2  3  4
@@ -121,20 +128,37 @@ let clg = [
 // let oldClg = clg.filter((item) => item.year < 2000);
 // console.log(oldClg);
 
-// let res = clg.map((item, i) => {
-//   //   console.log(item, i);
-//   return item;
-// });
-// let res2 = clg.forEach((item, i) => {
-//   //   console.log(item, i);
-//   return item;
-// });
+// .map() vs .forEach()
+let res = clg.map((item, i) => {
+  //   console.log(item, i);
+  return item;
+});
+let res2 = clg.forEach((item, i) => {
+  //   console.log(item, i);
+  return item;
+});
 
 // console.log(res, res2);
 
 let nums = [3, 7, 9, 2, 5];
 let sum = nums.reduce((acc, cur) => {
-  console.log(acc, cur);
+  //           0   3
+  //           3   7
+  //          10   9
+  //          19   2
+  //          21   5
+  // console.log(acc, cur);
   return acc + cur;
-}, 1);
+}, 0);
 // console.log(sum);
+
+//something1 -> HighOrderFunction
+// CallBack Function -> something2
+function something1(something2) {
+  something2();
+  return null;
+}
+
+function something2() {
+  return null;
+}
