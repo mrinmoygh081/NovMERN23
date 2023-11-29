@@ -203,10 +203,8 @@ hr {
   color: rgb(17 16 16);
 }
 .Category_gallery {
-  height: 272px;
-  width: 579px;
   /* border: 2px solid red; */
-  padding: 12px;
+  padding: 12px 0;
 }
 .Category_img {
   height: 180px;
@@ -219,8 +217,6 @@ hr {
   background-color: rgb(0 0 0 / 8%);
 }
 .Category_content {
-  height: 243px;
-  width: 309px;
   /* border: 2px solid red; */
   padding: 11px;
   color: black;

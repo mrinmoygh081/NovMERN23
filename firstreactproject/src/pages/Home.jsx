@@ -1,11 +1,12 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import CatComp from "../components/CatComp";
 
 const Home = () => {
   return (
     <>
-      <Header />
+      <Header link="Demo Link" />
       <main>
         <section id="image_gallery">
           <div className="slideshow-container">
@@ -214,78 +215,18 @@ const Home = () => {
               <h1>Catagory</h1>
             </div>
             <div className="row">
-              <div className="col-12 col-md-6">
-                <div className="Category_gallery">
-                  <div className="C_g">
-                    <div className="Category_img">
-                      <img src="./images/brand/br1.png" />
-                    </div>
-                    <div className="Category_content">
-                      <h1>Advanced Fullstack Web-dev</h1>
-
-                      <p>
-                        Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Sit, qui! sit amet consectetur
-                        adipisicing elit. Nemo, voluptatibus.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-12 col-md-6">
-                <div className="Category_gallery">
-                  <div className="C_g">
-                    <div className="Category_img">
-                      <img src="./images/brand/br2.png" />
-                    </div>
-                    <div className="Category_content">
-                      <h1>Advanced Fullstack Web-dev</h1>
-
-                      <p>
-                        Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Sit, qui! sit amet consectetur
-                        adipisicing elit. Nemo, voluptatibus.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-12 col-md-6">
-                <div className="Category_gallery">
-                  <div className="C_g">
-                    <div className="Category_img">
-                      <img src="./Images/brand/br4.png" />
-                    </div>
-                    <div className="Category_content">
-                      <h1>Advanced Fullstack Web-dev</h1>
-
-                      <p>
-                        Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Sit, qui! sit amet consectetur
-                        adipisicing elit. Nemo, voluptatibus.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-12 col-md-6">
-                <div className="Category_gallery">
-                  <div className="C_g">
-                    <div className="Category_img">
-                      <img src="./Images/brand/br5.png" />
-                    </div>
-                    <div className="Category_content">
-                      <h1>Advanced Fullstack Web-dev</h1>
-
-                      <p>
-                        Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Sit, qui! sit amet consectetur
-                        adipisicing elit. Nemo, voluptatibus.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <CatComp
+                heading="Advanced Fullstack Web-dev"
+                para="Tech Pathshala provides best MERN course in the World!"
+              />
+              <CatComp
+                heading="Ethical Hacking Masterclass"
+                para="Lorejkf asldfj ldsf slkdfklsdlf!"
+              />
+              <CatComp
+                heading="Abhinash is the coolest boy in the class"
+                para="Hello, Yes this is absolutely right."
+              />
             </div>
           </div>
         </section>
