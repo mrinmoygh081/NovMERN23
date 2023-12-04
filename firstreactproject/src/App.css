@@ -6,7 +6,7 @@
 
 body {
   background-color: white;
-  color: white;
+  color: #111;
   font-family: "Poppins", sans-serif;
 }
 
@@ -43,6 +43,22 @@ nav ul li a {
   position: relative;
   margin: 20px auto -24px;
   border-radius: 12px;
+}
+
+/* Buttons */
+.btn_style {
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #ff0000;
+  padding: 6px 20px;
+  font-size: 20px;
+  border-radius: 4px;
+  color: #ff0000;
+  transition: all 0.3s ease-in-out;
+}
+.btn_style:hover {
+  background-color: #ff0000;
+  color: #fff;
 }
 
 /* Next & previous buttons */
@@ -175,12 +191,12 @@ nav ul li a {
   color: rgb(75, 68, 68);
 }
 
-.row {
+/* .row {
   display: flex;
   max-width: 1160px;
   margin: auto;
   flex-wrap: wrap;
-}
+} */
 
 .prod_list h1 {
   margin: 46px 0px;
@@ -369,3 +385,26 @@ footer {
 }
 
 /*.footer-copyright */
+
+/* support page */
+.support_card {
+  border: 1px solid #a8a9bf;
+  padding: 20px;
+  margin: 10px;
+}
+.support_card .title {
+  text-align: center;
+}
+.support_card .title h2 span {
+  position: relative;
+}
+.support_card .title h2 span::after {
+  content: "";
+  height: 10px;
+  width: 10px;
+  background-color: red;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
