@@ -3,8 +3,12 @@ import { toast } from "react-toastify";
 import { isEmail } from "../../utils/isEmail";
 import { isPhone } from "../../utils/isPhone";
 import { apiCallFun } from "../../utils/fetchAPIs";
+import { useDispatch } from "react-redux";
+import { loginHandler } from "../../redux/slices/loginSlice";
 
 export const Login = () => {
+  const dispatch = useDispatch();
+
   const [form, setForm] = useState({
     phoneOrEmail: "",
     password: "",
@@ -39,8 +43,12 @@ export const Login = () => {
 
     const data = await apiCallFun("POST", "login/admin", subForm, null);
     console.log(data);
+    const { token } = data;
     if (data?.status) {
       toast.success(data?.msg);
+      if (token) {
+        dispatch(loginHandler(token));
+      }
       setForm({
         phoneOrEmail: "",
         password: "",
@@ -81,6 +89,7 @@ export const Login = () => {
             <button className="login-span login-ahref w-100">Login</button>
           </span>
         </form>
+        {/* <button onClick={() => dispatch(loginHandler())}>Login</button> */}
       </div>
     </>
   );
