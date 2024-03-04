@@ -4,6 +4,7 @@ import { Login } from "./pages/admin/Login";
 import AddCar from "./pages/admin/AddCar";
 import Dashboard from "./pages/admin/Dashboard";
 import { useSelector } from "react-redux";
+import { CarList } from "./pages/admin/CarLists";
 
 function App() {
   const { token } = useSelector((state) => state.auth);
@@ -16,7 +17,8 @@ function App() {
           {token ? (
             <>
               <Route path="/admin" element={<Dashboard />} />
-              <Route path="/admin/add" element={<AddCar />} />
+              <Route path="/admin/cars" element={<CarList />} />
+              <Route path="/admin/cars/add" element={<AddCar />} />
             </>
           ) : (
             <Route path="/admin" element={<Login />} />

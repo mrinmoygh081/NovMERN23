@@ -704,3 +704,17 @@ a {
 .bg-dark-1 {
   background-color: #212529 !important;
 }
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.max_200 {
+  max-width: 200px;
+}
+.mb_100 {
+  margin-bottom: 100px;
+}
+.content-wrapper {
+  margin-top: 55px;
+}
