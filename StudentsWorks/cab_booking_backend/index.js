@@ -12,6 +12,7 @@ const bookingRoute = require("./route/user/booking");
 const app = express();
 
 app.use(express.json());
+app.use("/images", express.static("images"));
 app.use(cors("*"));
 
 app.use(`${process.env.APP_VERSION}`, commonAuthRoute);

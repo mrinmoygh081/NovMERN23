@@ -24,7 +24,8 @@ const upload = multer({
 // Create
 const addVehicle = async (req, res) => {
   const car_images = req.files;
-  const car_image = req.files[0].path;
+  const car_image = req.files[0].filename;
+  console.log(req.files);
 
   const { model, license_no, capacity, type, color, fare } = req.body;
   let countData;
@@ -39,7 +40,7 @@ const addVehicle = async (req, res) => {
       !color ||
       !fare
     ) {
-      return res.status(400).json({
+      return res.status(200).json({
         status: 0,
         msg: "Please fill in all the fields in order to proceed!!!",
       });
@@ -53,14 +54,14 @@ const addVehicle = async (req, res) => {
       [countData] = await connect.execute(countQuery);
     } catch (err) {
       console.log(err);
-      return res.status(400).json({
+      return res.status(200).json({
         status: 0,
         msg: "Could not search for the required data!!!",
       });
     }
 
     if (countData[0].count > 0) {
-      return res.status(400).json({
+      return res.status(200).json({
         status: 0,
         msg: "Data already present!!!",
       });
